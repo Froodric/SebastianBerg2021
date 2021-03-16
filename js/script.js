@@ -35,5 +35,4 @@ function apply_cookie_settings() {
 }
 
 // Run at start
-build_games();
 apply_cookie_settings();
