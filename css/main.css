@@ -50,7 +50,6 @@ body.dark > .theme-toggle-button img {
 }
 
 .theme-toggle-button img:hover {
-  transform: scale(1.1);
   transform: rotate(180deg);
 }
 .circle {
@@ -61,8 +60,12 @@ body.dark > .theme-toggle-button img {
   position: fixed;
   width: 70px;
   height: 70px;
-
   border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.circle:hover {
+  transform: scale(1.2);
 }
 
 .landing-page {
@@ -288,4 +291,23 @@ header {
   width: 352px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 11px 0px var(--box-shadow);
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: none;
+  }
+
+  .teamet {
+    height: 210vh;
+  }
+
+  .stats {
+    text-align: center;
+    height: 500px;
+    flex-direction: column;
+  }
+  .center-logo {
+    top: 40%;
+  }
 }
