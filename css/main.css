@@ -64,10 +64,6 @@ body.dark > .theme-toggle-button img {
   transition: 0.2s ease-in-out;
 }
 
-.circle:hover {
-  transform: scale(1.2);
-}
-
 .landing-page {
   background: url(../img/background.png);
   background-position: center center;
@@ -187,6 +183,7 @@ header {
 
 .name {
   position: relative;
+
   top: 60%;
   font-size: 3rem;
   animation-name: typing;
@@ -309,5 +306,16 @@ header {
   }
   .center-logo {
     top: 40%;
+
+    width: 40%;
+  }
+
+  .theme-toggle-button {
+    transform: scale(1);
+    position: absolute;
+    top: 50px;
+  }
+  .name {
+    line-height: 50px;
   }
 }
