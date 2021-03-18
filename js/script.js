@@ -27,7 +27,7 @@ function apply_dark_if_cookie() {
     if (key == "dark" && val == "true") dark_active = true;
   }
 
-  if (dark_active) toggle_dark_theme(true);
+  if (dark_active) set_dark_theme(true);
 }
 
 function apply_cookie_settings() {
@@ -35,4 +35,5 @@ function apply_cookie_settings() {
 }
 
 // Run at start
+build_games();
 apply_cookie_settings();

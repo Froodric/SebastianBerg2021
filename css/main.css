@@ -50,6 +50,7 @@ body.dark > .theme-toggle-button img {
 }
 
 .theme-toggle-button img:hover {
+  transform: scale(1.1);
   transform: rotate(180deg);
 }
 .circle {
@@ -60,8 +61,8 @@ body.dark > .theme-toggle-button img {
   position: fixed;
   width: 70px;
   height: 70px;
+
   border-radius: 50%;
-  transition: 0.2s ease-in-out;
 }
 
 .landing-page {
@@ -153,7 +154,7 @@ header {
   transition: ease-in-out 0.2s;
   position: fixed;
   width: 100%;
-  padding: 30px 200px;
+  padding: 50px 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,7 +184,6 @@ header {
 
 .name {
   position: relative;
-
   top: 60%;
   font-size: 3rem;
   animation-name: typing;
@@ -288,34 +288,4 @@ header {
   width: 352px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 11px 0px var(--box-shadow);
-}
-
-@media only screen and (max-width: 600px) {
-  header {
-    display: none;
-  }
-
-  .teamet {
-    height: 210vh;
-  }
-
-  .stats {
-    text-align: center;
-    height: 500px;
-    flex-direction: column;
-  }
-  .center-logo {
-    top: 40%;
-
-    width: 40%;
-  }
-
-  .theme-toggle-button {
-    transform: scale(1);
-    position: absolute;
-    top: 50px;
-  }
-  .name {
-    line-height: 50px;
-  }
 }
