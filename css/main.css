@@ -62,7 +62,6 @@ body.dark > .theme-toggle-button img {
   position: fixed;
   width: 70px;
   height: 70px;
-
   border-radius: 50%;
 }
 
@@ -85,13 +84,13 @@ body.dark > .theme-toggle-button img {
 .teamet {
   background-color: var(--white-color);
   width: 100%;
-  height: auto;
+  min-height: 110vh;
 }
 
 .tjänster {
   background-color: var(--darker-white);
   width: 100%;
-  height: auto;
+  min-height: 120vh;
 }
 
 .stats {
@@ -124,7 +123,7 @@ body.dark > .theme-toggle-button img {
 .galleri {
   background-color: var(--white-color);
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .logo {
@@ -155,7 +154,7 @@ header {
   transition: ease-in-out 0.2s;
   position: fixed;
   width: 100%;
-  padding: 50px 200px;
+  padding: 30px 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,7 +283,7 @@ header {
 }
 
 .card {
-  margin: 50px;
+  margin: 10px;
   height: 591px;
   width: 352px;
   background-color: var(--white-color);
@@ -295,7 +294,6 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   margin-top: 50px;
 }
 
@@ -318,29 +316,47 @@ body.dark .tjänster-card img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
-  width: 400px;
-  height: 400px;
+  margin: 10px;
+  width: 350px;
+  height: 350px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 11px 0px var(--box-shadow);
+  transition: ease-in-out 0.2s;
 }
 
-.tjänster-card:hover .info {
-  display: block;
-}
-.tjänster-card:hover .service-name {
-  display: none;
+.tjänster-card:hover {
+  height: 700px;
 }
 
-.tjänster-card:hover img {
-  width: 20%;
+.gallerygrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  gap: 10px;
 }
 
-.info {
-  background: none;
-  color: var(--button-color);
-  text-align: center;
-  display: none;
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 70px;
+}
+
+.filters h1 {
+  cursor: pointer;
+  color: var(--text-color-alt);
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 600px) {
