@@ -297,7 +297,12 @@ header {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+    background: url(../img/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
+
     flex-direction: column;
     height: 600px;
   }
