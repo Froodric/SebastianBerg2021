@@ -91,7 +91,7 @@ body.dark > .theme-toggle-button img {
 .tjänster {
   background-color: var(--darker-white);
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 .stats {
@@ -289,6 +289,58 @@ header {
   width: 352px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 11px 0px var(--box-shadow);
+}
+
+.tjänster-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.service-name {
+  margin-top: 50px;
+  color: var(--button-color);
+  font-size: 2rem;
+}
+
+.tjänster-card img {
+  filter: invert(0%) !important;
+}
+
+body.dark .tjänster-card img {
+  filter: invert(100%) !important;
+}
+
+.tjänster-card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  width: 400px;
+  height: 400px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 11px 0px var(--box-shadow);
+}
+
+.tjänster-card:hover .info {
+  display: block;
+}
+.tjänster-card:hover .service-name {
+  display: none;
+}
+
+.tjänster-card:hover img {
+  width: 20%;
+}
+
+.info {
+  background: none;
+  color: var(--button-color);
+  text-align: center;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
