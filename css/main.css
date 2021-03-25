@@ -250,6 +250,7 @@ header {
   justify-content: center;
   padding-top: 100px;
   text-align: center;
+  flex-wrap: wrap;
 }
 .teamet-text h1 {
   color: var(--red-custom);
@@ -348,6 +349,7 @@ body.dark .tjänster-card img {
   align-items: center;
   position: relative;
   top: 70px;
+  flex-wrap: wrap;
 }
 
 .filters > h1[data-clicked="true"] {
@@ -402,5 +404,12 @@ body.dark .tjänster-card img {
     background-size: cover;
     width: 100%;
     height: 100vh;
+  }
+
+  .teamet-text h1 {
+    font-size: 1.5rem;
+  }
+  .teamet-text h2 {
+    font-size: 1.5rem;
   }
 }
