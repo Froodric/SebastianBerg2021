@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Frood Filters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="filters">
+      <h1
+        data-filter="alla"
+        data-clicked="false"
+        onclick="filters_changed(this)"
+      >
+        ALLA
+      </h1>
+      <h1
+        data-filter="porträtt"
+        data-clicked="false"
+        onclick="filters_changed(this)"
+      >
+        PORTRÄTT
+      </h1>
+      <h1
+        data-filter="försvarsmakten"
+        data-clicked="false"
+        onclick="filters_changed(this)"
+      >
+        FÖRSVARSMAKTEN
+      </h1>
+      <h1
+        data-filter="produkter"
+        data-clicked="false"
+        onclick="filters_changed(this)"
+      >
+        PRODUKTER
+      </h1>
+      <h1
+        data-filter="övrigt"
+        data-clicked="false"
+        onclick="filters_changed(this)"
+      >
+        ÖVRIGT
+      </h1>
+    </div>
+    <div class="gallerygrid">
+      <div class="gallery-item porträtt">
+        <img src="img/Sebastian.png" class="gallery__img" />
+      </div>
+      <div class="gallery-item porträtt">
+        <img src="img/Sebastian.png" class="gallery__img" />
+      </div>
+      <div class="gallery-item produkter">
+        <img src="img/Sebastian.png" class="gallery__img" />
+      </div>
+      <div class="gallery-item produkter">
+        <img src="img/Sebastian.png" class="gallery__img" />
+      </div>
+    </div>
+    <style>
+      .filters {
+        cursor: pointer;
+      }
+      .hider {
+        display: none;
+      }
+    </style>
+    <script>
+      /**@param {HTMLElement} changed */
+      function filters_changed(changed) {
+        if (changed.dataset.clicked == "false") {
+          changed.dataset.clicked = "true";
+        } else {
+          changed.dataset.clicked = "false";
+        }
+
+        var tags_checked = [];
+        for (let h1 of /** @type{HTMLElement[]} */ (document.querySelectorAll(
+          ".filters.h1"
+        ))) {
+          if (h1.dataset.clicked == "true")
+            tags_checked.push(h1.dataset.filter);
+        }
+        var GG = document.querySelector(".gallerygrid");
+        for (let pic of GG.children) {
+          var pic_stays = true;
+          for (let tag of tags_checked) {
+            if (pic.classList.contains(tag) == false) pic_stays = false;
+          }
+
+          if (pic_stays) {
+            pic.classList.remove("hider");
+          } else {
+            pic.classList.add("hider");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

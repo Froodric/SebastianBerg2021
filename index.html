@@ -100,38 +100,34 @@
         <h2>BILDER I HÖG KVALITÉ</h2>
       </div>
       <div class="filters">
-        <h1>ALLA</h1>
-        <h1>PORTRÄTT</h1>
-        <h1>FÖRSVARSMAKTEN</h1>
-        <h1>PRODUKTER</h1>
-        <h1>ÖVRIGT</h1>
+        <h1 class="active-filter" data-filter="gallery-item" data-clicked="false" onclick="filters_changed(this)">ALLA</h1>
+        <h1 data-filter="porträtt" data-clicked="false" onclick="filters_changed(this)" >PORTRÄTT</h1>
+        <h1 data-filter="försvarsmakten" data-clicked="false" onclick="filters_changed(this)" >FÖRSVARSMAKTEN</h1>
+        <h1 data-filter="produkter" data-clicked="false" onclick="filters_changed(this)" >PRODUKTER</h1>
+        <h1 data-filter="övrigt" data-clicked="false" onclick="filters_changed(this)" >ÖVRIGT</h1>
       </div>
-      <div class="gallerygrid">
-        <!-- PORTRÄTT-->
-        <figure id="porträtt" class="gallery__item gallery__item--0">
+      <div class="gallerygrid"> 
+        <div class="gallery-item porträtt ">
           <img
             src="img/Sebastian.png"
             class="gallery__img"
           />
-        </figure>
-        <figure id="porträtt" class="gallery__item gallery__item--0">
+        </div>
+        <div class="gallery-item porträtt ">
           <img
             src="img/Sebastian.png"
             class="gallery__img"
           />
-        </figure>
-        <figure id="porträtt" class="gallery__item gallery__item--0">
+        </div>
+        <div class="gallery-item försvarsmakten ">
           <img
-            src="img/Sebastian.png"
+            src="img/Fredric.png"
             class="gallery__img"
           />
-        </figure>
-        <figure id="porträtt" class="gallery__item gallery__item--0">
-          <img
-            src="img/Sebastian.png"
-            class="gallery__img"
-          />
-        </figure>
+        </div>
+ 
+     
+      </div>
         
     </section>
     <section id="info" class="info"></section>

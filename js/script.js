@@ -36,3 +36,24 @@ function apply_cookie_settings() {
 
 // Run at start
 apply_cookie_settings();
+
+/**@param {HTMLElement} changed */
+function filters_changed(changed) {
+  // Set all to false
+  for (let h1 of /** @type{HTMLElement[]} */ (document.querySelectorAll(
+    ".filters>h1"
+  ))) {
+    h1.dataset.clicked = "false";
+  }
+
+  changed.dataset.clicked = "true";
+  var search_class = changed.dataset.filter;
+  var GG = document.querySelector(".gallerygrid");
+  for (let pic of GG.children) {
+    if (pic.classList.contains(search_class)) {
+      pic.classList.remove("hider");
+    } else {
+      pic.classList.add("hider");
+    }
+  }
+}

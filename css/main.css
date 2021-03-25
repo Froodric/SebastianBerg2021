@@ -350,6 +350,14 @@ body.dark .tjänster-card img {
   top: 70px;
 }
 
+.filters > h1[data-clicked="true"] {
+  color: #d23939;
+}
+
+.hider {
+  display: none;
+}
+
 .filters h1 {
   cursor: pointer;
   color: var(--text-color-alt);
