@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
-  let windowPosition = window.scrollY > 0;
+  let windowPosition = window.scrollY > 850;
   header.classList.toggle("scrolling-active", windowPosition);
 });
 

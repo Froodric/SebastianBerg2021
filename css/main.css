@@ -17,6 +17,7 @@ body {
   --text-color-alt: rgb(0, 0, 0);
   --box-shadow: rgba(178, 179, 205, 0.5);
   --button-color: #000;
+  --blur-color: hsla(0, 0%, 100%, 0.096);
   transition: 0.2s ease-in-out;
 }
 
@@ -28,6 +29,7 @@ body.dark {
   --text-color-alt: rgb(255, 255, 255);
   --box-shadow: rgba(32, 32, 32, 0.5);
   --button-color: #fff;
+  --blur-color: hsla(0, 0%, 0%, 0.096);
   transition: 0.2s ease-in-out;
 }
 
@@ -135,6 +137,8 @@ body.dark > .theme-toggle-button img {
   background-color: var(--white-color);
   box-shadow: 0px 0px 32px -12px var(--box-shadow);
   color: var(--text-color-alt);
+  backdrop-filter: blur(10px);
+  background-color: var(--blur-color);
 }
 
 .scrolling-active a {
@@ -237,7 +241,7 @@ header {
     opacity: 0%;
   }
   to {
-    letter-spacing: 4px;
+    letter-spacing: 0px;
     opacity: 100%;
   }
 }
