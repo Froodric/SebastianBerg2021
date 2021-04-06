@@ -11,11 +11,11 @@
 
 body {
   --red-custom: #d23939;
-  --darker-white: rgb(248, 247, 255);
+  --darker-white: rgb(245, 244, 253);
   --white-color: #fff;
   --text-color: #fff;
   --text-color-alt: rgb(0, 0, 0);
-  --box-shadow: rgba(178, 179, 205, 0.5);
+  --box-shadow: rgba(48, 48, 48, 0.5);
   --button-color: #000;
   --blur-color: hsla(0, 0%, 100%, 0.096);
   transition: 0.2s ease-in-out;
@@ -27,7 +27,7 @@ body.dark {
   --white-color: rgb(15, 15, 15);
   --text-color: rgb(255, 255, 255);
   --text-color-alt: rgb(255, 255, 255);
-  --box-shadow: rgba(32, 32, 32, 0.5);
+  --box-shadow: rgba(26, 26, 26, 0.5);
   --button-color: #fff;
   --blur-color: hsla(0, 0%, 0%, 0.096);
   transition: 0.2s ease-in-out;
@@ -36,6 +36,10 @@ body.dark {
 body.dark > .theme-toggle-button img {
   filter: invert(100%);
   transform: rotate(0deg);
+}
+
+body.dark .socialmedia-logos img {
+  filter: invert(100%);
 }
 
 .theme-toggle-button {
@@ -79,7 +83,7 @@ body.dark > .theme-toggle-button img {
 .info {
   background-color: var(--darker-white);
   width: 100%;
-  height: 150px;
+  height: 300px;
 }
 
 .teamet {
@@ -131,11 +135,15 @@ body.dark > .theme-toggle-button img {
 .logo {
   font-size: 2rem;
   font-weight: 600;
+  transition: ease-in-out 0.2s;
+}
+.logo:hover {
+  transform: rotate(-4deg);
 }
 
 .scrolling-active {
   background-color: var(--white-color);
-  box-shadow: 0px 0px 32px -12px var(--box-shadow);
+  box-shadow: 0px 0px 20px 0px var(--box-shadow);
   color: var(--text-color-alt);
   backdrop-filter: blur(10px);
   background-color: var(--blur-color);
@@ -432,7 +440,117 @@ body.dark .tjänster-card img {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialmedia-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialmedia-logos img {
+  margin: 0px 10px;
+  cursor: pointer;
+
+  transition: 0.1s ease-in-out;
+  transform: scale(0.99);
+}
+
+.socialmedia h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--red-custom);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.socialmedia-logos img:hover {
+  transform: scale(1.2);
+}
+
+.socialmedia-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.kontakt span {
+  color: var(--text-color-alt);
+  font-weight: 500;
+}
+
+.kontakt h1 {
+  color: #d23939;
+  letter-spacing: 2px;
+}
+
+.kontakt {
+  line-height: 25px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  margin-top: 50px;
+  position: static;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5b5b5b;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.copyright a {
+  color: rgb(0, 153, 255);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .kontakt {
+    line-height: 25px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kontakt h1 {
+    font-size: 0.9rem;
+  }
+
+  .socialmedia {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    padding-top: 50px;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5b5b5b;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+
+  .copyright a {
+    color: rgb(0, 153, 255);
+    text-decoration: none;
+  }
+
   .stats {
     display: flex;
     align-items: center;
