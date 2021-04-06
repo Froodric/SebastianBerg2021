@@ -561,7 +561,6 @@ body.dark .tjänster-card img {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-
     flex-direction: column;
     height: 600px;
   }
