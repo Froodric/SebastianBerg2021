@@ -453,9 +453,7 @@ body.dark .tjänster-card img {
 }
 
 .socialmedia-logos img {
-  margin: 0px 10px;
-  cursor: pointer;
-
+  margin: 30px 10px;
   transition: 0.1s ease-in-out;
   transform: scale(0.99);
 }
@@ -526,10 +524,6 @@ body.dark .tjänster-card img {
   }
 
   .kontakt h1 {
-    font-size: 0.9rem;
-  }
-
-  .socialmedia {
     font-size: 0.9rem;
   }
 
