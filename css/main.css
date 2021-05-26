@@ -6,7 +6,6 @@
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   text-decoration: none;
-
   list-style: none;
 }
 
@@ -186,34 +185,37 @@ header {
 
 .center-logo {
   width: 170px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   animation-name: startup-animation;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
+  padding-bottom: 40px;
+}
+
+.landing-page-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .name {
-  position: relative;
-  top: 60%;
   font-size: 3rem;
   font-weight: 700;
   animation-name: typing;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
   text-align: center;
-  transform: translateY(-50%);
+  line-height: 40px;
+  padding-bottom: 10px;
 }
 
 .slogan {
   font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 57%;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .name span {
@@ -532,6 +534,11 @@ body.dark .tjänster-card img {
     align-items: center;
   }
 
+  .filters h1 {
+    font-size: 0.7rem;
+    flex-direction: column;
+  }
+
   .kontakt h1 {
     font-size: 0.9rem;
   }
@@ -567,18 +574,22 @@ body.dark .tjänster-card img {
     flex-direction: column;
     height: 600px;
   }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .theme-toggle-button img {
+    width: 65%;
+  }
   header {
     display: none;
   }
-  .center-logo {
-    width: 170px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-  }
+
   .theme-toggle-button {
-    right: 100px;
-    top: 50px;
+    right: 60px;
+    top: 10px;
   }
 
   .landing-page {
