@@ -224,11 +224,15 @@ header {
   color: var(--red-custom);
 }
 
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .arrow {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  bottom: 45px;
   animation-name: arrow-animation;
   animation-duration: 0.9s;
   animation-iteration-count: infinite;
