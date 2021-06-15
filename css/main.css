@@ -1,3 +1,4 @@
+/* ======================================================= CORE ======================================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +10,17 @@
   list-style: none;
 }
 
+header {
+  z-index: 50;
+  transition: ease-in-out 0.2s;
+  position: fixed;
+  width: 100%;
+  padding: 30px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
   --red-custom: #d23939;
   --darker-white: rgb(245, 244, 253);
@@ -18,6 +30,7 @@ body {
   --box-shadow: rgba(48, 48, 48, 0.5);
   --button-color: #000;
   --blur-color: hsla(0, 0%, 100%, 0.096);
+  --dot-color: rgb(225, 225, 230);
   transition: 0.2s ease-in-out;
 }
 
@@ -30,16 +43,14 @@ body.dark {
   --box-shadow: rgba(26, 26, 26, 0.5);
   --button-color: #fff;
   --blur-color: hsla(0, 0%, 0%, 0.096);
+  --dot-color: rgb(26, 26, 26);
   transition: 0.2s ease-in-out;
 }
 
-body.dark > .theme-toggle-button img {
-  filter: invert(100%);
-  transform: rotate(0deg);
-}
-
+body.dark > .theme-toggle-button img,
 body.dark .socialmedia-logos img {
   filter: invert(100%);
+  transform: rotate(0deg);
 }
 
 .theme-toggle-button {
@@ -59,6 +70,7 @@ body.dark .socialmedia-logos img {
   transform: scale(1.1);
   transform: rotate(180deg);
 }
+
 .circle {
   display: flex;
   justify-content: center;
@@ -70,6 +82,9 @@ body.dark .socialmedia-logos img {
   border-radius: 50%;
 }
 
+/* ======================================================= CORE END ======================================================= */
+
+/* ======================================================= Landing Page ======================================================= */
 .landing-page {
   background: url(../img/background.png);
   background-position: center center;
@@ -78,134 +93,6 @@ body.dark .socialmedia-logos img {
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
-}
-
-.info {
-  background-color: var(--darker-white);
-  width: 100%;
-  height: 300px;
-}
-
-.teamet {
-  background-color: var(--white-color);
-  width: 100%;
-  min-height: 50vh;
-}
-.teamet-text {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  text-align: center;
-  flex-wrap: wrap;
-}
-.teamet-text h1 {
-  color: var(--red-custom);
-  font-size: 2rem;
-  line-height: 0px;
-}
-.teamet-text h2 {
-  color: var(--text-color-alt);
-  font-size: 3rem;
-}
-
-.teamet-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.tjänster {
-  background-color: var(--darker-white);
-  width: 100%;
-  min-height: 120vh;
-}
-
-.stats {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  background: url(../img/background.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-}
-
-.stat1 h1,
-.stat2 h1,
-.stat3 h1 {
-  font-size: 4rem;
-}
-
-.stat1 h2,
-.stat2 h2,
-.stat3 h2 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.galleri {
-  padding-bottom: 100px;
-  background-color: var(--white-color);
-  width: 100%;
-  min-height: 100vh;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: 600;
-  transition: ease-in-out 0.2s;
-}
-.logo:hover {
-  transform: rotate(-4deg);
-}
-
-.scrolling-active {
-  background-color: var(--white-color);
-  box-shadow: 0px 0px 20px 0px var(--box-shadow);
-  color: var(--text-color-alt);
-  backdrop-filter: blur(10px);
-  background-color: var(--blur-color);
-}
-
-.scrolling-active a {
-  color: var(--text-color-alt);
-}
-
-.scrolling-active .logo {
-  color: var(--text-color-alt);
-}
-
-h2 {
-  white-space: pre;
-}
-
-header {
-  z-index: 50;
-  transition: ease-in-out 0.2s;
-  position: fixed;
-  width: 100%;
-  padding: 30px 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-links li {
-  font-weight: 500;
-  display: inline-block;
-  padding: 0 15px;
-  transition: 0.2s ease-in-out;
-}
-
-.nav-links li:hover {
-  background-color: #d23939;
-  transform: scale(1.1);
 }
 
 .center-logo {
@@ -276,28 +163,52 @@ header {
   }
 }
 
-@keyframes typing {
-  from {
-    letter-spacing: 50px;
-    opacity: 0%;
-  }
-  to {
-    letter-spacing: 0px;
-    opacity: 100%;
-  }
+/* ======================================================= Landing Page End ======================================================= */
+
+/* ======================================================= Teamet ======================================================= */
+.teamet {
+  background-color: var(--white-color);
+  width: 100%;
+  min-height: 90vh;
 }
 
-@keyframes startup-animation {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 230px;
-  }
+.teamet-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.teamet-text h1 {
+  backface-visibility: hidden;
+  color: var(--red-custom);
+  font-size: 2rem;
+  line-height: 0px;
+}
+.teamet-text h2 {
+  backface-visibility: hidden;
+  color: var(--text-color-alt);
+  font-size: 3rem;
+}
 
-  100% {
-    width: 170px;
-  }
+.teamet-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* ======================================================= Teamet End ======================================================= */
+
+/* ======================================================= Tjänster ======================================================= */
+
+.tjänster {
+  background-color: var(--darker-white);
+  width: 100%;
+  min-height: 100vh;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
 
 .card h1 {
@@ -374,6 +285,103 @@ body.dark .tjänster-card img {
   display: flex;
   opacity: 100%;
   position: relative;
+}
+
+/* ======================================================= Tjänster End ======================================================= */
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: url(../img/background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.stat1 h1,
+.stat2 h1,
+.stat3 h1 {
+  font-size: 4rem;
+}
+
+.stat1 h2,
+.stat2 h2,
+.stat3 h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.galleri {
+  padding-bottom: 100px;
+  background-color: var(--white-color);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: ease-in-out 0.2s;
+}
+.logo:hover {
+  transform: rotate(-4deg);
+}
+
+.scrolling-active {
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 20px 0px var(--box-shadow);
+  color: var(--text-color-alt);
+  backdrop-filter: blur(10px);
+  background-color: var(--blur-color);
+}
+
+.scrolling-active a {
+  color: var(--text-color-alt);
+}
+
+.scrolling-active .logo {
+  color: var(--text-color-alt);
+}
+
+.nav-links li {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 15px;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-links li:hover {
+  background-color: #d23939;
+  transform: scale(1.1);
+}
+
+@keyframes typing {
+  from {
+    letter-spacing: 50px;
+    opacity: 0%;
+  }
+  to {
+    letter-spacing: 0px;
+    opacity: 100%;
+  }
+}
+
+@keyframes startup-animation {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 230px;
+  }
+
+  100% {
+    width: 170px;
+  }
 }
 
 .addon {
@@ -492,36 +500,12 @@ body.dark .tjänster-card img {
   justify-content: space-evenly;
 }
 
-.kontakt span {
-  color: var(--text-color-alt);
-  font-weight: 500;
-}
-
-.kontakt h1 {
-  color: #d23939;
-  letter-spacing: 2px;
-}
-
-.kontakt {
-  line-height: 25px;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.copyright {
-  margin-top: 50px;
-  position: static;
+.footer {
+  background-color: var(--darker-white);
   width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #5b5b5b;
-  font-size: 1rem;
-  font-weight: 400;
+  height: 300px;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
 
 .copyright a {
