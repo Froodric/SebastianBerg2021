@@ -223,6 +223,31 @@ header {
 /* ======================================================= Landing Page End ======================================================= */
 
 /* ======================================================= Teamet ======================================================= */
+.card h1 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 2rem;
+  transform: translateZ(50px);
+}
+
+.card h2 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  transform: translateZ(50px);
+}
+
+.card {
+  margin: 0px 25px;
+  height: 591px;
+  width: 352px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 11px 0px var(--box-shadow);
+}
+
 .teamet {
   background-color: var(--white-color);
   width: 100%;
@@ -259,90 +284,6 @@ header {
 /* ======================================================= Teamet End ======================================================= */
 
 /* ======================================================= Tjänster ======================================================= */
-
-.tjänster {
-  background-color: var(--darker-white);
-  width: 100%;
-  min-height: 100vh;
-  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-  background-size: 10px 10px;
-}
-
-.card h1 {
-  color: var(--text-color-alt);
-  text-align: center;
-  font-size: 2rem;
-  transform: translateZ(50px);
-}
-
-.card h2 {
-  color: var(--text-color-alt);
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
-  transform: translateZ(50px);
-}
-
-.card {
-  margin: 10px;
-  height: 591px;
-  width: 352px;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  background-color: var(--white-color);
-  box-shadow: 0px 0px 11px 0px var(--box-shadow);
-}
-
-.tjänster-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-.service-name {
-  margin-top: 50px;
-  color: var(--button-color);
-  font-size: 2rem;
-}
-
-.tjänster-card img {
-  filter: invert(0%) !important;
-}
-
-body.dark .tjänster-card img {
-  filter: invert(100%) !important;
-}
-
-.tjänster-card {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 350px;
-  height: 350px;
-  background-color: var(--white-color);
-  box-shadow: 0px 0px 11px 0px var(--box-shadow);
-  transition: ease-in-out 0.2s;
-}
-
-.tjänster-card:hover {
-  height: 700px;
-}
-
-.tjänster-card:hover .priser {
-  display: flex;
-  opacity: 100%;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.tjänster-card:hover .addon {
-  display: flex;
-  opacity: 100%;
-  position: relative;
-}
 
 /* ======================================================= Tjänster End ======================================================= */
 
@@ -411,21 +352,6 @@ body.dark .tjänster-card img {
   100% {
     width: 170px;
   }
-}
-
-.addon {
-  opacity: 0%;
-  transition: ease-in-out 0.3s;
-  position: absolute;
-  line-height: 50px;
-  top: 30px;
-  line-height: 15px;
-  font-size: 0.56rem;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color-alt);
 }
 
 .gallerygrid {
@@ -506,7 +432,25 @@ body.dark .tjänster-card img {
   text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
+  .gallerygrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    gap: 3px;
+  }
+
+  .gallery-item img {
+    object-fit: cover;
+    padding-bottom: 300px;
+  }
+
+  .gallery-item {
+    width: 100px;
+    height: 100px;
+  }
   .kontakt {
     line-height: 25px;
     padding-top: 50px;
@@ -516,31 +460,22 @@ body.dark .tjänster-card img {
     align-items: center;
   }
 
-  .filters h1 {
-    font-size: 0.7rem;
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    display: inline-block;
+    padding-left: 15px;
+  }
+
+  .filters h1 {
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .kontakt h1 {
     font-size: 0.9rem;
-  }
-
-  .copyright {
-    padding-top: 50px;
-    position: static;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5b5b5b;
-    font-size: 0.7rem;
-    font-weight: 400;
-  }
-
-  .copyright a {
-    color: rgb(0, 153, 255);
-    text-decoration: none;
   }
 
   .stats {
@@ -553,8 +488,17 @@ body.dark .tjänster-card img {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+
     flex-direction: column;
     height: 600px;
+  }
+
+  .stats h1 {
+    font-size: 2.5rem;
+  }
+
+  .stats h2 {
+    font-size: 1.5rem;
   }
 
   .circle {
