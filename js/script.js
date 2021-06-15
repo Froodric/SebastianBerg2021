@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
-  let windowPosition = window.scrollY > 850;
+  let windowPosition = window.scrollY > 10;
   header.classList.toggle("scrolling-active", windowPosition);
 });
 
@@ -40,9 +40,9 @@ apply_cookie_settings();
 /**@param {HTMLElement} changed */
 function filters_changed(changed) {
   // Set all to false
-  for (let h1 of /** @type{HTMLElement[]} */ (document.querySelectorAll(
-    ".filters>h1"
-  ))) {
+  for (let h1 of /** @type{HTMLElement[]} */ (
+    document.querySelectorAll(".filters>h1")
+  )) {
     h1.dataset.clicked = "false";
   }
 

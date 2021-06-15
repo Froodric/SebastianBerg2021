@@ -10,24 +10,13 @@
   list-style: none;
 }
 
-header {
-  z-index: 50;
-  transition: ease-in-out 0.2s;
-  position: fixed;
-  width: 100%;
-  padding: 30px 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 body {
   --red-custom: #d23939;
   --darker-white: rgb(245, 244, 253);
   --white-color: #fff;
   --text-color: #fff;
   --text-color-alt: rgb(0, 0, 0);
-  --box-shadow: rgba(48, 48, 48, 0.5);
+  --box-shadow: rgba(57, 59, 73, 0.5);
   --button-color: #000;
   --blur-color: hsla(0, 0%, 100%, 0.096);
   --dot-color: rgb(225, 225, 230);
@@ -47,10 +36,17 @@ body.dark {
   transition: 0.2s ease-in-out;
 }
 
-body.dark > .theme-toggle-button img,
-body.dark .socialmedia-logos img {
-  filter: invert(100%);
+body.dark > .theme-toggle-button img {
+  filter: invert(100%) !important;
   transform: rotate(0deg);
+}
+
+body.dark .socialmedia img {
+  filter: invert(0%) !important;
+}
+
+body.dark .fas {
+  color: white !important;
 }
 
 .theme-toggle-button {
@@ -83,6 +79,67 @@ body.dark .socialmedia-logos img {
 }
 
 /* ======================================================= CORE END ======================================================= */
+
+/* ======================================================= NAVBAR ======================================================= */
+
+header {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  z-index: 50;
+  transition: ease-in-out 0.2s;
+  position: fixed;
+  width: 100%;
+  padding: 30px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scrolling-active {
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 10px 0px var(--box-shadow);
+  color: var(--text-color-alt);
+}
+
+.scrolling-active a {
+  color: var(--text-color-alt);
+}
+
+.scrolling-active .logo {
+  color: var(--text-color-alt);
+}
+
+.scrolling-active .socialmedia img {
+  filter: invert(100%) !important;
+}
+
+.scrolling-active .fas {
+  color: black;
+}
+
+.nav-links li {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 15px;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-links li:hover {
+  background-color: #d23939;
+  transform: scale(1.1);
+}
+
+.socialmedia img {
+  padding: 0px 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.2);
+}
+/* ======================================================= Navbar End ======================================================= */
 
 /* ======================================================= Landing Page ======================================================= */
 .landing-page {
@@ -332,34 +389,6 @@ body.dark .tjänster-card img {
   transform: rotate(-4deg);
 }
 
-.scrolling-active {
-  background-color: var(--white-color);
-  box-shadow: 0px 0px 20px 0px var(--box-shadow);
-  color: var(--text-color-alt);
-  backdrop-filter: blur(10px);
-  background-color: var(--blur-color);
-}
-
-.scrolling-active a {
-  color: var(--text-color-alt);
-}
-
-.scrolling-active .logo {
-  color: var(--text-color-alt);
-}
-
-.nav-links li {
-  font-weight: 500;
-  display: inline-block;
-  padding: 0 15px;
-  transition: 0.2s ease-in-out;
-}
-
-.nav-links li:hover {
-  background-color: #d23939;
-  transform: scale(1.1);
-}
-
 @keyframes typing {
   from {
     letter-spacing: 50px;
@@ -462,42 +491,6 @@ body.dark .tjänster-card img {
   font-weight: 600;
   font-size: 1.2rem;
   transition: 0.1s ease-in-out;
-}
-
-.socialmedia {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.socialmedia-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.socialmedia-logos img {
-  margin: 30px 10px;
-  transition: 0.1s ease-in-out;
-  transform: scale(0.99);
-}
-
-.socialmedia h1 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: var(--red-custom);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.socialmedia-logos img:hover {
-  transform: scale(1.2);
-}
-
-.socialmedia-container {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .footer {
