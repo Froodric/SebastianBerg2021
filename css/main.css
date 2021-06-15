@@ -89,7 +89,31 @@ body.dark .socialmedia-logos img {
 .teamet {
   background-color: var(--white-color);
   width: 100%;
-  min-height: 110vh;
+  min-height: 50vh;
+}
+.teamet-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.teamet-text h1 {
+  color: var(--red-custom);
+  font-size: 2rem;
+  line-height: 0px;
+}
+.teamet-text h2 {
+  color: var(--text-color-alt);
+  font-size: 3rem;
+}
+
+.teamet-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .tjänster {
@@ -176,7 +200,6 @@ header {
   font-weight: 500;
   display: inline-block;
   padding: 0 15px;
-
   transition: 0.2s ease-in-out;
 }
 
@@ -230,6 +253,7 @@ header {
   align-items: center;
   width: 100%;
 }
+
 .arrow {
   position: relative;
   bottom: 45px;
@@ -274,31 +298,6 @@ header {
   100% {
     width: 170px;
   }
-}
-
-.teamet-text {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  text-align: center;
-  flex-wrap: wrap;
-}
-.teamet-text h1 {
-  color: var(--red-custom);
-  font-size: 2rem;
-  line-height: 0px;
-}
-.teamet-text h2 {
-  color: var(--text-color-alt);
-  font-size: 3rem;
-}
-
-.teamet-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 50px;
 }
 
 .card h1 {
