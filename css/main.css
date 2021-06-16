@@ -290,7 +290,7 @@ header {
 .tjänster {
   background-color: var(--darker-white);
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
   background-size: 10px 10px;
 }
@@ -608,5 +608,57 @@ header {
   }
   .teamet-text h2 {
     font-size: 1.5rem;
+  }
+
+  .tjänster-fyrkanter {
+    flex-direction: column;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tjänster-fyrkant {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px var(--box-shadow);
+    margin: 15px 15px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--white-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  .tjänster-fyrkanter img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding-top: 40px;
+  }
+  .tjänster-fyrkanter h1 {
+    color: var(--text-color-alt);
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tjänster-fyrkanter p {
+    padding-top: 5px;
+    display: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color-alt);
+    text-align: center;
+  }
+
+  .tjänster-fyrkanter h2 {
+    display: none;
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 0.8rem;
+    color: var(--text-color-alt);
+    text-align: center;
+  }
+
+  .tjänster-fyrkant:focus h1 {
+    padding-top: 30px;
   }
 }
