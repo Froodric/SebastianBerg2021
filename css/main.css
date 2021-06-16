@@ -16,10 +16,11 @@ body {
   --white-color: #fff;
   --text-color: #fff;
   --text-color-alt: rgb(0, 0, 0);
-  --box-shadow: rgba(57, 59, 73, 0.5);
+  --box-shadow: rgba(125, 139, 153, 0.5);
   --button-color: #000;
   --blur-color: hsla(0, 0%, 100%, 0.096);
   --dot-color: rgb(225, 225, 230);
+  --dark-color: #212121;
   transition: 0.2s ease-in-out;
 }
 
@@ -36,7 +37,8 @@ body.dark {
   transition: 0.2s ease-in-out;
 }
 
-body.dark > .theme-toggle-button img {
+body.dark > .theme-toggle-button img,
+body.dark .tjänster-fyrkanter img {
   filter: invert(100%) !important;
   transform: rotate(0deg);
 }
@@ -139,6 +141,7 @@ header {
 .socialmedia img:hover {
   transform: scale(1.2);
 }
+
 /* ======================================================= Navbar End ======================================================= */
 
 /* ======================================================= Landing Page ======================================================= */
@@ -245,7 +248,7 @@ header {
   transform-style: preserve-3d;
   perspective: 1000px;
   background-color: var(--white-color);
-  box-shadow: 0px 0px 11px 0px var(--box-shadow);
+  box-shadow: 0px 0px 10px 0px var(--box-shadow);
 }
 
 .teamet {
@@ -257,7 +260,7 @@ header {
 .teamet-text {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 100px;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -284,7 +287,76 @@ header {
 /* ======================================================= Teamet End ======================================================= */
 
 /* ======================================================= Tjänster ======================================================= */
+.tjänster {
+  background-color: var(--darker-white);
+  width: 100%;
+  min-height: 80vh;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
 
+.tjänster-fyrkanter {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tjänster-fyrkant {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px var(--box-shadow);
+  margin: 0px 15px;
+  width: 350px;
+  height: 350px;
+  background-color: var(--white-color);
+  transition: 0.2s ease-in-out;
+}
+
+.tjänster-fyrkanter img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  padding-top: 60px;
+}
+.tjänster-fyrkanter h1 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tjänster-fyrkanter p {
+  padding-top: 20px;
+  display: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--text-color-alt);
+  text-align: center;
+}
+
+.tjänster-fyrkanter h2 {
+  display: none;
+  font-weight: 500;
+  line-height: 10px;
+  font-size: 1rem;
+  color: var(--text-color-alt);
+  text-align: center;
+}
+
+.tjänster-fyrkant:focus {
+  transform: scale(1.1);
+}
+
+.tjänster-fyrkant:focus img {
+  display: none;
+}
+.tjänster-fyrkant:focus h1 {
+  padding-top: 50px;
+}
+
+.tjänster-fyrkant:focus p,
+.tjänster-fyrkant:focus h2 {
+  display: block;
+}
 /* ======================================================= Tjänster End ======================================================= */
 
 .stats {
