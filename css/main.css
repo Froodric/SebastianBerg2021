@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--text-color);
   text-decoration: none;
   list-style: none;
@@ -126,11 +126,12 @@ header {
   display: inline-block;
   padding: 0 15px;
   transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 .nav-links li:hover {
-  background-color: #d23939;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .socialmedia img {
