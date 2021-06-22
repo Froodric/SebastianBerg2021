@@ -5,7 +5,7 @@
   padding: 0;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
-  color: var(--text-color);
+
   text-decoration: none;
   list-style: none;
 }
@@ -49,6 +49,10 @@ body.dark .socialmedia img {
 
 body.dark .fas {
   color: white !important;
+}
+
+a {
+  color: var(--text-color);
 }
 
 .theme-toggle-button {
@@ -97,6 +101,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: ease-in-out 0.2s;
+}
+.logo:hover {
+  transform: rotate(-4deg);
 }
 
 .scrolling-active {
@@ -154,6 +167,7 @@ header {
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
+  color: var(--text-color);
 }
 
 .center-logo {
@@ -260,7 +274,7 @@ header {
 .teamet {
   background-color: var(--white-color);
   width: 100%;
-  min-height: 90vh;
+  min-height: 70vh;
 }
 
 .teamet-text {
@@ -272,7 +286,7 @@ header {
 }
 .teamet-text h1 {
   backface-visibility: hidden;
-  color: var(--red-custom);
+  color: var(--text-color-alt);
   font-size: 2rem;
   line-height: 0px;
 }
@@ -296,7 +310,7 @@ header {
 .tjänster {
   background-color: var(--darker-white);
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
   background-size: 10px 10px;
 }
@@ -365,7 +379,9 @@ header {
 }
 /* ======================================================= Tjänster End ======================================================= */
 
+/* ======================================================= Stats ======================================================= */
 .stats {
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -392,44 +408,15 @@ header {
   font-weight: 500;
 }
 
+/* ======================================================= Stats End ======================================================= */
+
+/* ======================================================= Gallery ======================================================= */
+
 .galleri {
   padding-bottom: 100px;
   background-color: var(--white-color);
   width: 100%;
   min-height: 100vh;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: 600;
-  transition: ease-in-out 0.2s;
-}
-.logo:hover {
-  transform: rotate(-4deg);
-}
-
-@keyframes typing {
-  from {
-    letter-spacing: 50px;
-    opacity: 0%;
-  }
-  to {
-    letter-spacing: 0px;
-    opacity: 100%;
-  }
-}
-
-@keyframes startup-animation {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 230px;
-  }
-
-  100% {
-    width: 170px;
-  }
 }
 
 .gallerygrid {
@@ -488,6 +475,10 @@ header {
   display: none;
 }
 
+iframe {
+  width: 100%;
+}
+
 .filters h1 {
   cursor: pointer;
   color: var(--text-color-alt);
@@ -497,18 +488,27 @@ header {
   transition: 0.1s ease-in-out;
 }
 
+/* ======================================================= Gallery End ======================================================= */
+
+/* ======================================================= Footer ======================================================= */
+
 .footer {
   background-color: var(--darker-white);
   width: 100%;
   height: 300px;
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
   background-size: 10px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .copyright a {
   color: rgb(0, 153, 255);
   text-decoration: none;
 }
+
+/* ======================================================= Footer End ======================================================= */
 
 @media screen and (max-width: 600px) {
   .name {
@@ -598,10 +598,8 @@ header {
   }
 
   .teamet-text h1 {
-    font-size: 3rem;
-  }
-  .teamet-text h2 {
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-bottom: 10px;
   }
 
   .tjänster-fyrkanter {

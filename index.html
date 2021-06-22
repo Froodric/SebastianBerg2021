@@ -36,6 +36,7 @@
       rel="stylesheet"
     />
     <script src="js/script.js" defer></script>
+    <script src="js/iframe.js" defer></script>
   </head>
   <body>
     <div class="theme-toggle-button">
@@ -84,8 +85,7 @@
 
     <section id="teamet" class="teamet">
       <div class="teamet-text">
-        <h1>OM</h1>
-        <h2>TEAMET</h2>
+        <h1>TEAMET</h1>
       </div>
       <div class="teamet-cards">
         <div class="card" data-tilt>
@@ -108,7 +108,6 @@
     <section id="tjänster" class="tjänster">
       <div class="teamet-text">
         <h1>TJÄNSTER</h1>
-        <h2>TJÄNSTER</h2>
       </div>
       <div class="tjänster-fyrkanter">
         <div tabindex="0" class="tjänster-fyrkant">
@@ -166,199 +165,16 @@
         <h2>Samarbeten</h2>
       </div>
     </section>
-    <section id="galleri" class="galleri">
-      <div class="teamet-text">
-        <h1>GALLERI</h1>
-        <h2>BILDER I HÖG KVALITÉ</h2>
-      </div>
-      <div class="filters">
-        <h1
-          class="active-filter"
-          data-filter="gallery-item"
-          data-clicked="true"
-          onclick="filters_changed(this)"
-        >
-          ALLA
-        </h1>
-        <h1
-          data-filter="porträtt"
-          data-clicked="false"
-          onclick="filters_changed(this)"
-        >
-          PORTRÄTT
-        </h1>
-        <h1
-          data-filter="försvarsmakten"
-          data-clicked="false"
-          onclick="filters_changed(this)"
-        >
-          FÖRSVARSMAKTEN
-        </h1>
-        <h1
-          data-filter="produkter"
-          data-clicked="false"
-          onclick="filters_changed(this)"
-        >
-          PRODUKTER
-        </h1>
-        <h1
-          data-filter="övrigt"
-          data-clicked="false"
-          onclick="filters_changed(this)"
-        >
-          ÖVRIGT
-        </h1>
-      </div>
-      <div class="gallerygrid">
-        <div class="gallery-item porträtt">
-          <img
-            src="img/porträtt/Foto Sebastian Berg-8437.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item porträtt">
-          <img
-            src="img/porträtt/Foto Sebastian Berg-8445.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item porträtt">
-          <img
-            src="img/porträtt/Foto Sebastian Berg-8450.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item porträtt">
-          <img
-            src="img/porträtt/Foto Sebastian Berg-8626.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item porträtt">
-          <img
-            src="img/porträtt/Foto Sebastian Berg-8637.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7630.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7631.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7635.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7709.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7748.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7892.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-7917.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-8073.jpg"
-            class="gallery__img"
-          />
-        </div>
 
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-8341.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item försvarsmakten">
-          <img
-            src="img/makten/Foto Sebastian Berg-8402.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-1930.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-1931.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-1933.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-5000.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-5001.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-5003.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-6013.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-6014.jpg"
-            class="gallery__img"
-          />
-        </div>
-        <div class="gallery-item produkter">
-          <img
-            src="img/produkt/Foto Sebastian Berg-6016.jpg"
-            class="gallery__img"
-          />
-        </div>
-      </div>
-    </section>
-
+    <iframe
+      id="myIframe"
+      src="galleri.html"
+      scrolling="no"
+      frameborder="0"
+    ></iframe>
     <section id="footer" class="footer">
+      <div class="footer-content"></div>
+
       <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
     </section>
   </body>

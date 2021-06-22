@@ -5,11 +5,14 @@ window.addEventListener("scroll", function () {
 });
 
 function toggle_dark_theme(force_dark = false) {
-  if (document.body.classList.contains("dark") == false || force_dark) {
+  let iframe = document.getElementById("myIframe");
+  if (document.body.classList.contains("dark") === false || force_dark) {
     document.body.classList.add("dark");
+    iframe.contentDocument.body.classList.add("dark");
     document.cookie = "dark=true";
   } else {
     document.body.classList.remove("dark");
+    iframe.contentDocument.body.classList.remove("dark");
     document.cookie = "dark=false";
   }
 }
