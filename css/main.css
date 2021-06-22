@@ -477,6 +477,7 @@ header {
 
 iframe {
   width: 100%;
+  display: block;
 }
 
 .filters h1 {
