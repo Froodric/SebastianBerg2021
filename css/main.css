@@ -245,7 +245,7 @@ header {
   color: var(--text-color-alt);
   text-align: center;
   font-size: 1.2rem;
-  transform: translateZ(50px);
+  padding-top: 10px;
   line-height: 20px;
 }
 
@@ -258,15 +258,12 @@ header {
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
-  transform: translateZ(50px);
 }
 
 .card {
   margin: 20px 25px;
   height: 400px;
   width: 300px;
-  transform-style: preserve-3d;
-  perspective: 1000px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 10px 0px var(--box-shadow);
 }
@@ -285,13 +282,12 @@ header {
   flex-wrap: wrap;
 }
 .teamet-text h1 {
-  backface-visibility: hidden;
   color: var(--text-color-alt);
   font-size: 2rem;
+
   line-height: 0px;
 }
 .teamet-text h2 {
-  backface-visibility: hidden;
   color: var(--text-color-alt);
   font-size: 3rem;
 }
