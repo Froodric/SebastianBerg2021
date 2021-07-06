@@ -1,0 +1,58 @@
+.card h1 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.card img {
+  width: 300px;
+}
+
+.card h2 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card {
+  margin: 20px 25px;
+  height: 400px;
+  width: 300px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 10px 0px var(--box-shadow);
+}
+
+.teamet {
+  background-color: var(--white-color);
+  width: 100%;
+  min-height: 70vh;
+}
+
+.teamet-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.teamet-text h1 {
+  color: var(--text-color-alt);
+  font-size: 2rem;
+
+  line-height: 0px;
+}
+.teamet-text h2 {
+  color: var(--text-color-alt);
+  font-size: 3rem;
+}
+
+.teamet-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}

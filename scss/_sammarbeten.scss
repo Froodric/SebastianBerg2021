@@ -1,0 +1,23 @@
+#sammarbeten {
+  background: url(../img/background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sammarbeten img {
+  flex-wrap: wrap;
+  filter: saturate(100%);
+  padding: 0px 50px;
+  align-self: center;
+  max-width: 300px;
+  max-height: 100%;
+  display: flex;
+}

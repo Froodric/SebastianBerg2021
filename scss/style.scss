@@ -1,0 +1,87 @@
+@import "landing-page", "navbar", "teamet", "stats", "footer", "tjänster",
+  "gallery", "mobile", "sammarbeten";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  --red-custom: #d23939;
+  --darker-white: rgb(245, 244, 253);
+  --white-color: #fff;
+  --text-color: #fff;
+  --text-color-alt: rgb(0, 0, 0);
+  --box-shadow: rgba(125, 139, 153, 0.5);
+  --button-color: #000;
+  --blur-color: hsla(0, 0%, 100%, 0.096);
+  --dot-color: rgb(225, 225, 230);
+  --dark-color: #212121;
+  transition: 0.2s ease-in-out;
+}
+
+body.dark {
+  --red-custom: #d23939;
+  --darker-white: rgb(17, 17, 17);
+  --white-color: rgb(15, 15, 15);
+  --text-color: rgb(255, 255, 255);
+  --text-color-alt: rgb(255, 255, 255);
+  --box-shadow: rgba(26, 26, 26, 0.5);
+  --button-color: #fff;
+  --blur-color: hsla(0, 0%, 0%, 0.096);
+  --dot-color: rgb(26, 26, 26);
+  transition: 0.2s ease-in-out;
+}
+
+body.dark > .theme-toggle-button img,
+body.dark .tjänster-fyrkanter img {
+  filter: invert(100%) !important;
+  transform: rotate(0deg);
+}
+
+body.dark .socialmedia img {
+  filter: invert(0%) !important;
+}
+
+body.dark .fas {
+  color: white !important;
+}
+
+a {
+  color: var(--text-color);
+}
+
+.theme-toggle-button {
+  position: fixed;
+  cursor: pointer;
+  right: 100px;
+  bottom: 100px;
+  z-index: 10;
+  transform: scale(1);
+}
+.theme-toggle-button img {
+  transition: 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.theme-toggle-button img:hover {
+  transform: scale(1.1);
+  transform: rotate(180deg);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-color);
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* ======================================================= CORE END ======================================================= */

@@ -1,0 +1,81 @@
+/* ======================================================= Landing Page ======================================================= */
+.landing-page {
+  background: url(../img/background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+.center-logo {
+  width: 170px;
+  animation-name: startup-animation;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  padding-bottom: 40px;
+}
+
+.landing-page-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  animation-name: typing;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  text-align: center;
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+
+.slogan {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.name span {
+  color: var(--red-custom);
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow {
+  position: relative;
+  bottom: 45px;
+  animation-name: arrow-animation;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ======================================================= Landing Page End ======================================================= */

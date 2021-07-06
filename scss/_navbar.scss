@@ -1,0 +1,67 @@
+header {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  z-index: 50;
+  transition: ease-in-out 0.2s;
+  position: fixed;
+  width: 100%;
+  padding: 30px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: ease-in-out 0.2s;
+}
+.logo:hover {
+  transform: rotate(-4deg);
+}
+
+.scrolling-active {
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 10px 0px var(--box-shadow);
+  color: var(--text-color-alt);
+}
+
+.scrolling-active a {
+  color: var(--text-color-alt);
+}
+
+.scrolling-active .logo {
+  color: var(--text-color-alt);
+}
+
+.scrolling-active .socialmedia img {
+  filter: invert(100%) !important;
+}
+
+.scrolling-active .fas {
+  color: black;
+}
+
+.nav-links li {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 15px;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav-links li:hover {
+  transform: scale(1.2);
+}
+
+.socialmedia img {
+  padding: 0px 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.2);
+}

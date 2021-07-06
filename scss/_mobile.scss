@@ -1,0 +1,165 @@
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 2rem;
+    padding-bottom: 0px;
+  }
+
+  .galleri {
+    padding-bottom: 0px;
+    background-color: var(--white-color);
+    width: 100%;
+    min-height: 10vh;
+  }
+
+  .slogan {
+    font-weight: 400;
+  }
+
+  .center-logo {
+    width: 130px;
+  }
+
+  .gallerygrid {
+    flex-wrap: wrap;
+    padding-top: 0px;
+    gap: 3px;
+  }
+
+  .gallery-item img {
+    object-fit: cover;
+    padding-bottom: 250px;
+  }
+
+  .gallery-item {
+    width: 150px;
+    height: 150px;
+  }
+
+  .filters {
+    flex-direction: column;
+    display: inline-block;
+    padding-left: 15px;
+  }
+
+  .filters h1 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .stats {
+    justify-content: space-evenly;
+    text-align: center;
+    background: url(../img/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .stats h1 {
+    font-size: 2.5rem;
+  }
+
+  .stats h2 {
+    font-size: 1.5rem;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .theme-toggle-button img {
+    width: 65%;
+  }
+  header {
+    display: none;
+  }
+
+  .theme-toggle-button {
+    right: 60px;
+    top: 10px;
+  }
+
+  .landing-page {
+    background: url(../img/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .teamet-text h1 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  .tjänster-fyrkanter {
+    flex-direction: column;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tjänster-fyrkant {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px var(--box-shadow);
+    margin: 15px 15px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--white-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  .tjänster-fyrkanter img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding-top: 40px;
+  }
+  .tjänster-fyrkanter h1 {
+    color: var(--text-color-alt);
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tjänster-fyrkanter p {
+    padding-top: 5px;
+    display: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color-alt);
+    text-align: center;
+  }
+
+  .tjänster-fyrkanter h2 {
+    display: none;
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 0.8rem;
+    color: var(--text-color-alt);
+    text-align: center;
+  }
+
+  .tjänster-fyrkant:focus h1 {
+    padding-top: 30px;
+  }
+
+  .card img {
+    width: 200px;
+  }
+
+  .card {
+    margin: 20px 25px;
+    height: 350px;
+    width: 200px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px 0px var(--box-shadow);
+  }
+}

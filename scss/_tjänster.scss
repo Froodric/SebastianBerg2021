@@ -1,0 +1,70 @@
+.tjänster {
+  background-color: var(--darker-white);
+  width: 100%;
+  min-height: 80vh;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.tjänster-fyrkanter {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tjänster-fyrkant {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px var(--box-shadow);
+  margin: 0px 15px;
+  width: 350px;
+  height: 350px;
+  background-color: var(--white-color);
+  transition: 0.2s ease-in-out;
+}
+
+.tjänster-fyrkanter img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  padding-top: 60px;
+}
+.tjänster-fyrkanter h1 {
+  color: var(--text-color-alt);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tjänster-fyrkanter p {
+  padding-top: 20px;
+  display: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--text-color-alt);
+  text-align: center;
+}
+
+.tjänster-fyrkanter h2 {
+  display: none;
+  font-weight: 500;
+  line-height: 10px;
+  font-size: 1rem;
+  color: var(--text-color-alt);
+  text-align: center;
+}
+
+.tjänster-fyrkant:focus {
+  transform: scale(1.1);
+}
+
+.tjänster-fyrkant:focus img {
+  display: none;
+}
+.tjänster-fyrkant:focus h1 {
+  padding-top: 50px;
+}
+
+.tjänster-fyrkant:focus p,
+.tjänster-fyrkant:focus h2 {
+  display: block;
+}
