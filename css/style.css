@@ -559,7 +559,7 @@ iframe {
 
 #sammarbeten img {
   flex-wrap: wrap;
-  filter: saturate(100%);
+  filter: brightness(0) invert(1);
   padding: 0px 50px;
   align-self: center;
   max-width: 300px;
